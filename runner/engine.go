@@ -282,7 +282,7 @@ func (e *Engine) building() error {
 func (e *Engine) runBin() error {
 	var err error
 	e.runnerLog("running...")
-	e.runnerLog("%s %s", e.config.Build.Bin, e.config.Build.Args)
+	e.runnerLog("%s", e.config.Build.Bin)
 
 	cmd, stdout, stderr, err := e.startCmd(e.config.Build.Bin, e.config.Build.Args)
 	if err != nil {
