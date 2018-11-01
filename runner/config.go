@@ -33,6 +33,7 @@ type cfgBuild struct {
 	ExcludeDir []string `toml:"exclude_dir"`
 	Delay      int      `toml:"delay"`
 	Remove     bool     `toml:"remove_after"`
+	RunFirst   bool     `toml:"run_first"`
 }
 
 type cfgLog struct {

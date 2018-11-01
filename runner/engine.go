@@ -201,7 +201,9 @@ func (e *Engine) start() {
 			}
 			e.mainLog("%s has changed", e.config.rel(filename))
 		case <-firstRunCh:
-			// go down
+			if e.config.Build.RunFirst {
+				e.runBin()
+			}
 			break
 		}
 
